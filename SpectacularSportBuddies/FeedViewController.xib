@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="SpectacularSportBuddies" customModuleProvider="target">
             <connections>
+                <outlet property="createPostButton" destination="aF4-yb-n5m" id="pAk-KZ-DxH"/>
                 <outlet property="tableView" destination="iTU-BY-qGJ" id="Lzb-8N-ng8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,14 +18,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-BY-qGJ">
-                    <rect key="frame" x="0.0" y="100" width="600" height="440"/>
+                    <rect key="frame" x="0.0" y="140" width="600" height="400"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6Rw-W7-FuN"/>
+                        <outlet property="delegate" destination="-1" id="ljM-0Y-bXc"/>
+                    </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-yb-n5m">
+                    <rect key="frame" x="435" y="91" width="92" height="30"/>
+                    <state key="normal" title="Create a post"/>
+                    <connections>
+                        <action selector="createPostButtonTapped:" destination="-1" eventType="touchUpInside" id="6mO-Ma-cip"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="aF4-yb-n5m" secondAttribute="trailing" constant="73" id="63X-xG-d8m"/>
                 <constraint firstAttribute="trailing" secondItem="iTU-BY-qGJ" secondAttribute="trailing" id="RWz-8I-KQo"/>
-                <constraint firstItem="iTU-BY-qGJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="etw-Bj-43g"/>
+                <constraint firstItem="iTU-BY-qGJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="etw-Bj-43g"/>
+                <constraint firstItem="iTU-BY-qGJ" firstAttribute="top" secondItem="aF4-yb-n5m" secondAttribute="bottom" constant="19" id="jNs-ww-KLG"/>
                 <constraint firstAttribute="bottom" secondItem="iTU-BY-qGJ" secondAttribute="bottom" constant="60" id="vOi-Ik-D3N"/>
                 <constraint firstItem="iTU-BY-qGJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xpf-t2-gZp"/>
             </constraints>

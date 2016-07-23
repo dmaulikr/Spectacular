@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
@@ -27,12 +27,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginVC = LoginViewController()
         window?.rootViewController = loginVC
         window?.makeKeyAndVisible()
+
         if FBSDKAccessToken.currentAccessToken() != nil {
             FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
+            retrieveUserProfile()
             skipLoginScreen()
         }
 
         return true
+    }
+    
+    func retrieveUserProfile() {
+        let accessToken = FBSDKAccessToken.currentAccessToken()
+        let nameRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name"], tokenString: accessToken.tokenString, version: nil, HTTPMethod: "GET")
+        nameRequest.startWithCompletionHandler { (connection, result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                AppState.sharedInstance.username = result["name"] as! String
+                print(AppState.sharedInstance.username)
+            }
+        }
     }
     
     //fb login

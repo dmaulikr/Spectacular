@@ -10,9 +10,29 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    var post: Post! {
+        didSet {
+            setupDisplay()
+        }
+    }
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var timeRangeLabel: UILabel!
+    @IBOutlet weak var postedAtLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setupDisplay() {
+        nameLabel.text = post.username
+        locationLabel.text = post.location
+        timeRangeLabel.text = post.timeRange
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd' 'HH:mm"
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        postedAtLabel.text = dateFormatter.stringFromDate(post.postTime)
+        // TODO: Fix word wrap
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
