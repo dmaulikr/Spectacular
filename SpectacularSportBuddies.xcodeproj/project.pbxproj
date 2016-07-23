@@ -27,6 +27,15 @@
 		8986F9A61D441E6F0008684A /* InboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9A41D441E6F0008684A /* InboxViewController.xib */; };
 		8986F9A91D441E770008684A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9A71D441E770008684A /* ProfileViewController.swift */; };
 		8986F9AA1D441E770008684A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9A81D441E770008684A /* ProfileViewController.xib */; };
+		8986F9AE1D44237E0008684A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9AD1D44237E0008684A /* Post.swift */; };
+		8986F9B01D4423930008684A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9AF1D4423930008684A /* User.swift */; };
+		8986F9B31D4423F80008684A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9B21D4423F80008684A /* AppState.swift */; };
+		8986F9BF1D4426710008684A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9BD1D4426710008684A /* PostTableViewCell.swift */; };
+		8986F9C01D4426710008684A /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9BE1D4426710008684A /* PostTableViewCell.xib */; };
+		8986F9C31D44267B0008684A /* InboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9C11D44267B0008684A /* InboxTableViewCell.swift */; };
+		8986F9C41D44267B0008684A /* InboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9C21D44267B0008684A /* InboxTableViewCell.xib */; };
+		8986F9C71D4426D40008684A /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9C51D4426D40008684A /* PostDetailViewController.swift */; };
+		8986F9C81D4426D40008684A /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9C61D4426D40008684A /* PostDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +63,15 @@
 		8986F9A41D441E6F0008684A /* InboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxViewController.xib; sourceTree = "<group>"; };
 		8986F9A71D441E770008684A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8986F9A81D441E770008684A /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		8986F9AD1D44237E0008684A /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8986F9AF1D4423930008684A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8986F9B21D4423F80008684A /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8986F9BD1D4426710008684A /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		8986F9BE1D4426710008684A /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		8986F9C11D44267B0008684A /* InboxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewCell.swift; sourceTree = "<group>"; };
+		8986F9C21D44267B0008684A /* InboxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxTableViewCell.xib; sourceTree = "<group>"; };
+		8986F9C51D4426D40008684A /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		8986F9C61D4426D40008684A /* PostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +132,32 @@
 		8986F9761D43EB190008684A /* SpectacularSportBuddies */ = {
 			isa = PBXGroup;
 			children = (
+				8986F9B41D4426010008684A /* Views */,
+				8986F9B11D4423E20008684A /* Constants */,
+				8986F9AC1D44235B0008684A /* Controllers */,
+				8986F9AB1D44234F0008684A /* Model */,
 				8986F9891D43EB880008684A /* GoogleService-Info.plist */,
 				8986F9771D43EB190008684A /* AppDelegate.swift */,
 				8986F97B1D43EB190008684A /* Main.storyboard */,
 				8986F97E1D43EB190008684A /* Assets.xcassets */,
 				8986F9801D43EB190008684A /* LaunchScreen.storyboard */,
 				8986F9831D43EB190008684A /* Info.plist */,
+			);
+			path = SpectacularSportBuddies;
+			sourceTree = "<group>";
+		};
+		8986F9AB1D44234F0008684A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9AD1D44237E0008684A /* Post.swift */,
+				8986F9AF1D4423930008684A /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8986F9AC1D44235B0008684A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				8986F9951D44156F0008684A /* LoginViewController.swift */,
 				8986F9961D44156F0008684A /* LoginViewController.xib */,
 				8986F99B1D441D4F0008684A /* FeedViewController.swift */,
@@ -130,8 +168,29 @@
 				8986F9A41D441E6F0008684A /* InboxViewController.xib */,
 				8986F9A71D441E770008684A /* ProfileViewController.swift */,
 				8986F9A81D441E770008684A /* ProfileViewController.xib */,
+				8986F9C51D4426D40008684A /* PostDetailViewController.swift */,
+				8986F9C61D4426D40008684A /* PostDetailViewController.xib */,
 			);
-			path = SpectacularSportBuddies;
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8986F9B11D4423E20008684A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9B21D4423F80008684A /* AppState.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		8986F9B41D4426010008684A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9BD1D4426710008684A /* PostTableViewCell.swift */,
+				8986F9BE1D4426710008684A /* PostTableViewCell.xib */,
+				8986F9C11D44267B0008684A /* InboxTableViewCell.swift */,
+				8986F9C21D44267B0008684A /* InboxTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8986F9AA1D441E770008684A /* ProfileViewController.xib in Resources */,
+				8986F9C81D4426D40008684A /* PostDetailViewController.xib in Resources */,
+				8986F9C01D4426710008684A /* PostTableViewCell.xib in Resources */,
 				8986F9981D44156F0008684A /* LoginViewController.xib in Resources */,
 				8986F98A1D43EB880008684A /* GoogleService-Info.plist in Resources */,
 				8986F9821D43EB190008684A /* LaunchScreen.storyboard in Resources */,
+				8986F9C41D44267B0008684A /* InboxTableViewCell.xib in Resources */,
 				8986F97F1D43EB190008684A /* Assets.xcassets in Resources */,
 				8986F9A21D441D6D0008684A /* TabBarViewController.xib in Resources */,
 				8986F99E1D441D4F0008684A /* FeedViewController.xib in Resources */,
@@ -263,11 +325,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8986F9A91D441E770008684A /* ProfileViewController.swift in Sources */,
+				8986F9C71D4426D40008684A /* PostDetailViewController.swift in Sources */,
 				8986F9A51D441E6F0008684A /* InboxViewController.swift in Sources */,
 				8986F9A11D441D6D0008684A /* TabBarViewController.swift in Sources */,
+				8986F9B31D4423F80008684A /* AppState.swift in Sources */,
 				8986F9971D44156F0008684A /* LoginViewController.swift in Sources */,
+				8986F9B01D4423930008684A /* User.swift in Sources */,
 				8986F99D1D441D4F0008684A /* FeedViewController.swift in Sources */,
+				8986F9BF1D4426710008684A /* PostTableViewCell.swift in Sources */,
+				8986F9AE1D44237E0008684A /* Post.swift in Sources */,
 				8986F9781D43EB190008684A /* AppDelegate.swift in Sources */,
+				8986F9C31D44267B0008684A /* InboxTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
