@@ -19,6 +19,14 @@
 		8986F9971D44156F0008684A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9951D44156F0008684A /* LoginViewController.swift */; };
 		8986F9981D44156F0008684A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9961D44156F0008684A /* LoginViewController.xib */; };
 		8986F99A1D4415DF0008684A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8986F9991D4415DF0008684A /* Bolts.framework */; };
+		8986F99D1D441D4F0008684A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F99B1D441D4F0008684A /* FeedViewController.swift */; };
+		8986F99E1D441D4F0008684A /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F99C1D441D4F0008684A /* FeedViewController.xib */; };
+		8986F9A11D441D6D0008684A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F99F1D441D6D0008684A /* TabBarViewController.swift */; };
+		8986F9A21D441D6D0008684A /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9A01D441D6D0008684A /* TabBarViewController.xib */; };
+		8986F9A51D441E6F0008684A /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9A31D441E6F0008684A /* InboxViewController.swift */; };
+		8986F9A61D441E6F0008684A /* InboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9A41D441E6F0008684A /* InboxViewController.xib */; };
+		8986F9A91D441E770008684A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9A71D441E770008684A /* ProfileViewController.swift */; };
+		8986F9AA1D441E770008684A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9A81D441E770008684A /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		8986F9951D44156F0008684A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8986F9961D44156F0008684A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		8986F9991D4415DF0008684A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8986F99B1D441D4F0008684A /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		8986F99C1D441D4F0008684A /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		8986F99F1D441D6D0008684A /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8986F9A01D441D6D0008684A /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		8986F9A31D441E6F0008684A /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		8986F9A41D441E6F0008684A /* InboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxViewController.xib; sourceTree = "<group>"; };
+		8986F9A71D441E770008684A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8986F9A81D441E770008684A /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,14 @@
 				8986F9831D43EB190008684A /* Info.plist */,
 				8986F9951D44156F0008684A /* LoginViewController.swift */,
 				8986F9961D44156F0008684A /* LoginViewController.xib */,
+				8986F99B1D441D4F0008684A /* FeedViewController.swift */,
+				8986F99C1D441D4F0008684A /* FeedViewController.xib */,
+				8986F99F1D441D6D0008684A /* TabBarViewController.swift */,
+				8986F9A01D441D6D0008684A /* TabBarViewController.xib */,
+				8986F9A31D441E6F0008684A /* InboxViewController.swift */,
+				8986F9A41D441E6F0008684A /* InboxViewController.xib */,
+				8986F9A71D441E770008684A /* ProfileViewController.swift */,
+				8986F9A81D441E770008684A /* ProfileViewController.xib */,
 			);
 			path = SpectacularSportBuddies;
 			sourceTree = "<group>";
@@ -171,11 +195,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8986F9AA1D441E770008684A /* ProfileViewController.xib in Resources */,
 				8986F9981D44156F0008684A /* LoginViewController.xib in Resources */,
 				8986F98A1D43EB880008684A /* GoogleService-Info.plist in Resources */,
 				8986F9821D43EB190008684A /* LaunchScreen.storyboard in Resources */,
 				8986F97F1D43EB190008684A /* Assets.xcassets in Resources */,
+				8986F9A21D441D6D0008684A /* TabBarViewController.xib in Resources */,
+				8986F99E1D441D4F0008684A /* FeedViewController.xib in Resources */,
 				8986F97D1D43EB190008684A /* Main.storyboard in Resources */,
+				8986F9A61D441E6F0008684A /* InboxViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8986F9A91D441E770008684A /* ProfileViewController.swift in Sources */,
+				8986F9A51D441E6F0008684A /* InboxViewController.swift in Sources */,
+				8986F9A11D441D6D0008684A /* TabBarViewController.swift in Sources */,
 				8986F9971D44156F0008684A /* LoginViewController.swift in Sources */,
+				8986F99D1D441D4F0008684A /* FeedViewController.swift in Sources */,
 				8986F9781D43EB190008684A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

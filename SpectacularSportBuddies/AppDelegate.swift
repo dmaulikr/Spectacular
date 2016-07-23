@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         if FBSDKAccessToken.currentAccessToken() != nil {
             FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
-            //skipLoginScreen()
+            skipLoginScreen()
         }
 
         return true
@@ -39,6 +39,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         let handled = FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
         return handled
+    }
+    
+    func skipLoginScreen() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let tabVC = TabBarViewController()
+        let feedVC = FeedViewController()
+        let inboxVC = InboxViewController()
+        let profileVC = ProfileViewController()
+        
+        feedVC.title = "Workouts"
+        
+        inboxVC.title = "Inbox"
+        
+        profileVC.title = "Profile"
+
+        let feedNavController = UINavigationController()
+        feedNavController.tabBarItem.title = "Workouts"
+        feedNavController.viewControllers = [feedVC]
+        
+        let inboxNavController = UINavigationController()
+        inboxNavController.tabBarItem.title = "Inbox"
+        inboxNavController.viewControllers = [inboxVC]
+        
+        let profileNavController = UINavigationController()
+        profileNavController.title = "Profile"
+        profileNavController.viewControllers = [profileVC]
+        
+        tabVC.viewControllers = [feedNavController, inboxNavController, profileNavController]
+        appDelegate.window?.rootViewController = tabVC
+        appDelegate.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(application: UIApplication) {
