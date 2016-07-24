@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73C32424C012B583979EDD88 /* Pods_SpectacularSportBuddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CF6ED5FF24CEAE4D8FE667 /* Pods_SpectacularSportBuddies.framework */; };
+		897564391D453A7D00B8C1EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897564381D453A7D00B8C1EA /* Constants.swift */; };
 		8986F9781D43EB190008684A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9771D43EB190008684A /* AppDelegate.swift */; };
 		8986F97D1D43EB190008684A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8986F97B1D43EB190008684A /* Main.storyboard */; };
 		8986F97F1D43EB190008684A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8986F97E1D43EB190008684A /* Assets.xcassets */; };
@@ -36,12 +37,15 @@
 		8986F9C41D44267B0008684A /* InboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9C21D44267B0008684A /* InboxTableViewCell.xib */; };
 		8986F9C71D4426D40008684A /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9C51D4426D40008684A /* PostDetailViewController.swift */; };
 		8986F9C81D4426D40008684A /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9C61D4426D40008684A /* PostDetailViewController.xib */; };
+		8986F9CB1D4427720008684A /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986F9C91D4427720008684A /* CreatePostViewController.swift */; };
+		8986F9CC1D4427720008684A /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986F9CA1D4427720008684A /* CreatePostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21A8283A82F2AC3B04A95234 /* Pods-SpectacularSportBuddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectacularSportBuddies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpectacularSportBuddies/Pods-SpectacularSportBuddies.debug.xcconfig"; sourceTree = "<group>"; };
 		62CF6ED5FF24CEAE4D8FE667 /* Pods_SpectacularSportBuddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpectacularSportBuddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF0EA00AC6F003E84E62D87 /* Pods-SpectacularSportBuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectacularSportBuddies.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpectacularSportBuddies/Pods-SpectacularSportBuddies.release.xcconfig"; sourceTree = "<group>"; };
+		897564381D453A7D00B8C1EA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8986F9741D43EB190008684A /* SpectacularSportBuddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectacularSportBuddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8986F9771D43EB190008684A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8986F97C1D43EB190008684A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		8986F9C21D44267B0008684A /* InboxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxTableViewCell.xib; sourceTree = "<group>"; };
 		8986F9C51D4426D40008684A /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		8986F9C61D4426D40008684A /* PostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		8986F9C91D4427720008684A /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		8986F9CA1D4427720008684A /* CreatePostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,48 @@
 				6AF0EA00AC6F003E84E62D87 /* Pods-SpectacularSportBuddies.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		896288791D45303600E51BC1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9C91D4427720008684A /* CreatePostViewController.swift */,
+				8986F9CA1D4427720008684A /* CreatePostViewController.xib */,
+				8986F9C51D4426D40008684A /* PostDetailViewController.swift */,
+				8986F9C61D4426D40008684A /* PostDetailViewController.xib */,
+				8986F99B1D441D4F0008684A /* FeedViewController.swift */,
+				8986F99C1D441D4F0008684A /* FeedViewController.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		8962887A1D45304B00E51BC1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9A71D441E770008684A /* ProfileViewController.swift */,
+				8986F9A81D441E770008684A /* ProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		8962887B1D45305800E51BC1 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9A31D441E6F0008684A /* InboxViewController.swift */,
+				8986F9A41D441E6F0008684A /* InboxViewController.xib */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		8962887C1D4536FD00E51BC1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				8986F9951D44156F0008684A /* LoginViewController.swift */,
+				8986F9961D44156F0008684A /* LoginViewController.xib */,
+				8986F99F1D441D6D0008684A /* TabBarViewController.swift */,
+				8986F9A01D441D6D0008684A /* TabBarViewController.xib */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 		8986F96B1D43EB190008684A = {
@@ -158,18 +206,10 @@
 		8986F9AC1D44235B0008684A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8986F9951D44156F0008684A /* LoginViewController.swift */,
-				8986F9961D44156F0008684A /* LoginViewController.xib */,
-				8986F99B1D441D4F0008684A /* FeedViewController.swift */,
-				8986F99C1D441D4F0008684A /* FeedViewController.xib */,
-				8986F99F1D441D6D0008684A /* TabBarViewController.swift */,
-				8986F9A01D441D6D0008684A /* TabBarViewController.xib */,
-				8986F9A31D441E6F0008684A /* InboxViewController.swift */,
-				8986F9A41D441E6F0008684A /* InboxViewController.xib */,
-				8986F9A71D441E770008684A /* ProfileViewController.swift */,
-				8986F9A81D441E770008684A /* ProfileViewController.xib */,
-				8986F9C51D4426D40008684A /* PostDetailViewController.swift */,
-				8986F9C61D4426D40008684A /* PostDetailViewController.xib */,
+				8962887C1D4536FD00E51BC1 /* Root */,
+				8962887B1D45305800E51BC1 /* Inbox */,
+				8962887A1D45304B00E51BC1 /* Profile */,
+				896288791D45303600E51BC1 /* Feed */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8986F9B21D4423F80008684A /* AppState.swift */,
+				897564381D453A7D00B8C1EA /* Constants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -264,6 +305,7 @@
 				8986F97F1D43EB190008684A /* Assets.xcassets in Resources */,
 				8986F9A21D441D6D0008684A /* TabBarViewController.xib in Resources */,
 				8986F99E1D441D4F0008684A /* FeedViewController.xib in Resources */,
+				8986F9CC1D4427720008684A /* CreatePostViewController.xib in Resources */,
 				8986F97D1D43EB190008684A /* Main.storyboard in Resources */,
 				8986F9A61D441E6F0008684A /* InboxViewController.xib in Resources */,
 			);
@@ -325,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8986F9A91D441E770008684A /* ProfileViewController.swift in Sources */,
+				8986F9CB1D4427720008684A /* CreatePostViewController.swift in Sources */,
 				8986F9C71D4426D40008684A /* PostDetailViewController.swift in Sources */,
 				8986F9A51D441E6F0008684A /* InboxViewController.swift in Sources */,
 				8986F9A11D441D6D0008684A /* TabBarViewController.swift in Sources */,
@@ -334,6 +377,7 @@
 				8986F99D1D441D4F0008684A /* FeedViewController.swift in Sources */,
 				8986F9BF1D4426710008684A /* PostTableViewCell.swift in Sources */,
 				8986F9AE1D44237E0008684A /* Post.swift in Sources */,
+				897564391D453A7D00B8C1EA /* Constants.swift in Sources */,
 				8986F9781D43EB190008684A /* AppDelegate.swift in Sources */,
 				8986F9C31D44267B0008684A /* InboxTableViewCell.swift in Sources */,
 			);

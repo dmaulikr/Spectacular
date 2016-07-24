@@ -8,8 +8,9 @@
 
 import UIKit
 import FBSDKLoginKit
+import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,28 @@ class LoginViewController: UIViewController {
     
     func addFBLoginButton() {
         let fbLoginButton = FBSDKLoginButton()
+        fbLoginButton.delegate = self
         fbLoginButton.center = view.center
-        view.addSubview(fbLoginButton)
-        
+        view.addSubview(fbLoginButton) 
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+        FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("logged in successfully!")
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        AppState.sharedInstance.loggedIn = false
     }
 
 }

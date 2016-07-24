@@ -11,4 +11,6 @@ import Foundation
 class AppState: NSObject {
     static let sharedInstance = AppState()
     var loggedIn = false
+    var username = ""
+
 }
